@@ -1,0 +1,5 @@
+{
+  "description": "27.5M control; same LR horizon/data/tokenizer as main. Stop at the shared comparison budget.",
+  "model": {"block_size": 512, "vocab_size": 16384, "n_layer": 6, "n_head": 8, "n_embd": 512, "dropout": 0.0, "bias": false},
+  "train": {"seed": 42, "micro_batch_size": 16, "gradient_accumulation_steps": 8, "max_tokens": 1000013824, "learning_rate": 0.0006, "min_lr": 0.00006, "warmup_ratio": 0.02, "weight_decay": 0.1, "beta1": 0.9, "beta2": 0.95, "grad_clip": 1.0, "precision": "bf16", "compile": true, "eval_interval": 150, "eval_batches": 20, "log_interval": 10, "checkpoint_interval": 150}
+}

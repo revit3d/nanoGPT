@@ -1,0 +1,5 @@
+{
+  "description": "CPU integration fixture ONLY. Not a submission model; context 32 intentionally reduces test cost.",
+  "model": {"block_size": 32, "vocab_size": 512, "n_layer": 2, "n_head": 2, "n_embd": 32, "dropout": 0.0, "bias": false},
+  "train": {"seed": 42, "micro_batch_size": 2, "gradient_accumulation_steps": 2, "max_tokens": 2560, "learning_rate": 0.001, "min_lr": 0.0001, "warmup_ratio": 0.1, "precision": "fp32", "compile": false, "eval_interval": 5, "eval_batches": 2, "log_interval": 1, "checkpoint_interval": 5, "cpu_threads": 2}
+}

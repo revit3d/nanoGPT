@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "icelandic-gpt"
+version = "0.1.0"
+description = "A reproducible small Icelandic decoder-only language model trained from scratch"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = "MIT"
+dependencies = [
+  "torch>=2.5,<3",
+  "numpy>=1.26,<3",
+  "tokenizers>=0.20,<1",
+  "huggingface-hub>=0.26,<2",
+  "tensorboard>=2.18,<3",
+]
+
+[project.optional-dependencies]
+data = ["fasttext-wheel>=0.9.2,<0.10", "datasketch>=1.6,<2"]
+dev = ["pytest>=8,<10", "datasketch>=1.6,<2", "nbformat>=5.10,<6"]
+notebook = ["jupyterlab>=4,<5", "matplotlib>=3.9,<4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
